@@ -1,13 +1,20 @@
 dist/
 node_modules/
+build/
 .vscode/
 .idea/
-*.js
 *.tsbuildinfo
-
+.env
 *.exe
 *.out
 *.class
 *.iml
 
 test.ts
+test.js
+
+.cache/
+.next/
+out/
+.vite/
+turbo/
