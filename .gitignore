@@ -1,0 +1,13 @@
+dist/
+node_modules/
+.vscode/
+.idea/
+*.js
+*.tsbuildinfo
+
+*.exe
+*.out
+*.class
+*.iml
+
+test.ts
