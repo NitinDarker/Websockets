@@ -2,21 +2,19 @@ import { useEffect, useState } from 'react'
 import './App.css'
 
 function App() {
-  const [socket, setSocket] = useState();
+  const [socket, setSocket] = useState<WebSocket | null>();
   const [message, setMessage] = useState('');
 
   function sendMessage() {
     if (!socket) {
         return "No connection is established!";
     }
-    //@ts-ignore
     socket.send(message);
     console.log(message);
   }
 
   useEffect(() => {
     const wss = new WebSocket('ws://localhost:8000');
-    //@ts-ignore
     setSocket(wss);
 
     wss.onmessage = (event) => {
