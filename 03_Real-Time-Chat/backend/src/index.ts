@@ -1,5 +1,5 @@
 import { WebSocketServer, WebSocket } from "ws";
-const wss = new WebSocketServer({ port: 8000 });
+const wss = new WebSocketServer({ port: 8000, host: "0.0.0.0" });
 
 function sendMessage(socket: WebSocket, broadcast: string) {
   for (let s of socketList) {

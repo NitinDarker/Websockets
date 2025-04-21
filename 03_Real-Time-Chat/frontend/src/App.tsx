@@ -7,7 +7,7 @@ function App() {
   const broadcastRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    const ws: WebSocket = new WebSocket("ws://localhost:8000");
+    const ws: WebSocket = new WebSocket("ws://10.50.3.90:8000");
     setSocket(ws);
     ws.onopen = () => {
       console.log("A Connection to server is established!");
@@ -42,3 +42,4 @@ function App() {
 }
 
 export default App;
+
